@@ -1,24 +1,24 @@
 <template>
-    <lightning-card title="My IT Assets" icon-name="standard:asset_relationship">
-        <div class="slds-p-around_medium">
-            
-            <template lwc:if={assets.data}>
-                <div style="height: 300px;">
-                    <lightning-datatable
-                        key-field="Id"
-                        data={assets.data}
-                        columns={columns}
-                        hide-checkbox-column="true">
-                    </lightning-datatable>
-                </div>
-            </template>
-
-            <template lwc:if={assets.error}>
-                <div class="slds-text-color_error">
-                    Error loading assets. Please contact IT Helpdesk.
-                </div>
-            </template>
-
+  <lightning-card title="My IT Assets" icon-name="standard:asset_relationship">
+    <div class="slds-p-around_medium">
+      <template lwc:if={assets.data}>
+        <div style="height: 300px">
+          <lightning-datatable
+            key-field="Id"
+            data={assets.data}
+            columns={columns}
+            hide-checkbox-column="true"
+            onrowaction={handleRowAction}
+          >
+          </lightning-datatable>
         </div>
-    </lightning-card>
+      </template>
+
+      <template lwc:if={assets.error}>
+        <div class="slds-text-color_error">
+          Error loading assets. Please contact IT Helpdesk.
+        </div>
+      </template>
+    </div>
+  </lightning-card>
 </template>
