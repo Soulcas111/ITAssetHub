@@ -8,10 +8,6 @@
 ![Project Status](https://img.shields.io/badge/Status-Active-success)
 ![Salesforce](https://img.shields.io/badge/Salesforce-LWC-blue)
 
-## 📸 项目截图
-
-_(这里可以放你的 LWC 界面截图，或者是那个红色的报错框截图，证明功能是活的)_
-
 ## ✨ 核心功能与技术亮点
 
 ### 1. 员工自助门户 (LWC + Datatable)
